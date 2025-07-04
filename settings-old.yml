@@ -1,0 +1,489 @@
+Admin_Chat:
+  Bungee: {}
+  Discord_Channel: admin
+  Enabled:
+    Enabled: false
+  Log_To_Console: {}
+  Shortcut: none
+  Write_To_File: {}
+Announcer:
+  Bungee: {}
+  Ignore_Self: {}
+  Log_To_Console: {}
+  Sound: ENTITY_ARROW_HIT_PLAYER, 1.0, 0.1
+Anti_Bot:
+  Block_Chat_Until_Moved: {}
+  Block_Commands_Until_Moved:
+  - /afk
+  - /me
+  Block_Signs_With_Same_Text: {}
+  Cooldown:
+    Chat_After_Login: 2 seconds
+    Command_After_Login: 2 seconds
+    Rejoin: 0
+  Disallowed_Nicknames:
+  - (f+(\W|\d|_)*u+(\W|\d|_)*c+(\W|\d|_)*k+(\W|\d|_)*)
+  - bitch
+  - asshole
+  Join_Flood:
+    Commands:
+    - /kick {player} &4You have been kicked because your message matched the message
+      of recently joined player(s).
+    Enabled:
+      Enabled: false
+    Join_Threshold: 5 seconds
+    Min_Equal_Messages: 4
+    Min_Players: 5
+  Show_Quit_Message_Only_If_Logged: {}
+Anti_Caps:
+  Commands_To_Apply:
+  - /msg
+  - /tell
+  Enabled:
+    Enabled: true
+  Enabled_In_Commands: []
+  Ignore_Usernames: {}
+  Min_Caps_In_A_Row: 5
+  Min_Caps_Percentage: 50
+  Min_Message_Length: 5
+  Points:
+    Amount: 4 * ({capsPercentage} / 2)
+    Warn_Set: spam
+  Warn_If_Caps_Above_Percent: 50
+  Whitelist:
+  - OMG
+  - LOL
+  - WTF
+  - WOW
+  - ROFL
+Anti_Spam:
+  Chat:
+    Delay_Points:
+      Amount: 3 - {delay}
+      Warn_Set: fastmessages
+    Limit:
+      Max_Messages: 6
+      Period: 10 seconds
+      Points:
+        Amount: 3
+        Warn_Set: fastmessages
+    Message_Delay: 5
+    Parrot:
+      Delay: 0 ticks
+      Enabled:
+        Enabled: true
+      Minimum_Similarity: 85
+      Whitelist:
+      - hello
+      - hey
+    Similar_Percentage_Block: 95
+    Similarity_Message_Check_Count: 2
+    Similarity_Points:
+      Amount: 4 * ({similarityPercentage} / 2)
+      Warn_Set: spam
+    Whitelist_Delay:
+    - test
+    Whitelist_Similarity:
+    - hello
+    - hey
+  Commands:
+    Command_Delay: 2
+    Delay_Points:
+      Amount: 3 - {delay}
+      Warn_Set: fastmessages
+    Handle_As_Chat:
+    - /me
+    Limit:
+      Max_Commands: 8
+      Period: 10 seconds
+      Whitelist_Limit:
+      - chatcontrol
+      - chc
+    Similar_Percentage_Block: 0
+    Similarity_Points:
+      Amount: 4 * ({similarityPercentage} / 2)
+      Warn_Set: spam
+    Whitelist_Delay:
+    - /pp toggle
+    - /gw
+    - /gw toggle
+    - /eglow
+    - /ap
+    - /gmenu settings selfmorphview enable
+    - /gmenu settings selfmorphview disable
+    - /gmenu reset all
+    Whitelist_Similarity:
+    - /tell
+    - /pm
+    - /t
+    - /w
+    - /r
+    - /togglepm
+    - /togglebroadcast
+    Whitelist_Works_Like_Blacklist: {}
+  Regex_In_Whitelists: {}
+  Similarity_Check:
+    Ignore_Duplicate_Characters: {}
+    Ignore_Special_Characters: {}
+BungeeCord:
+  Enabled:
+    Enabled: true
+  Prefix: '&3 ⚡ &bFrom {server_name} &3➠ &f'
+Bungee_Chat:
+  Discord_Channel: global
+  Enabled:
+    Enabled: false
+  Enabled_By_Default:
+    Enabled: false
+  Log_To_Console: {}
+  Shortcut: '!'
+  Write_To_File: {}
+Clear:
+  Broadcast: {}
+  Console_Lines: 300
+  Do_Not_Clear_For_Staff: {}
+Clear_Data_If_Inactive: 30 days
+Color_Menu:
+  Icon:
+    Color: WHITE_SHULKER_BOX
+    Decoration: WHITE_CARPET
+    No_Permission: BARRIER
+    Reset_All: FEATHER
+    Reset_Decoration: WHITE_CARPET
+  Title: Chat Color & Decoration
+Command_Aliases:
+- chatcontrol
+- chc
+- cc
+Console_Filter:
+  Enabled:
+    Enabled: true
+  Filter_Console_Messages:
+  - Reached end of stream for
+  - Connection reset
+  - Target doesn't have the requested effect
+  - Applied effect Invisibility to
+  - Removed effect Invisibility from
+  - Can't keep up! Is the server overloaded?
+  - Showing new title for
+  - Showing new subtitle for
+  - No on-going login session for player
+  - Delaying force login until join event fired?
+  - is already authenticated. Cancelling force login.
+  - UUID of player
+  - Player info LOGIN command for
+  - Logging player
+  - No entity was found
+  - Successfully registered expansion
+  - Ignoring plugin channel in incoming
+  - You are running a development version of the plugin, please report any bugs to
+    GitHub.
+  - Downloading GEO IP database, because the old database is older than 30 days or
+    doesn't exist
+  - No MaxMind credentials found in the configuration file! GeoIp protections will
+    be disabled.
+  - There is no newer GEO IP database uploaded to MaxMind. Using the old one for now.
+  - 'Could not download GeoLiteAPI database [FileNotFoundException]: plugins/AuthMe/GeoLite2-Country.mmdb
+    (No such file or directory)'
+  - placeholder hook(s) have an update available.
+  - Plugin ItemJoin
+  - Plugin ajQueue
+  Log: {}
+Debug: []
+Enforce_New_Line: {}
+Grammar:
+  Capitalize:
+    Enabled:
+      Enabled: false
+    Min_Message_Length: 1
+  Insert_Dot:
+    Enabled:
+      Enabled: true
+    Min_Message_Length: 1
+  Lowercase_Second:
+    Enabled:
+      Enabled: true
+Groups:
+  Enabled:
+    Enabled: true
+  List:
+    donator:
+      Command_Delay: 1
+      Message_Delay: 3
+    staff:
+      Command_Delay: 0
+      Message_Delay: 2
+Ignore:
+  Aliases:
+  - ignore
+  - ign
+  - block
+  Chat: {}
+  Enabled:
+    Enabled: true
+  Private_Messages: {}
+Listener_Priority:
+  Checker: NORMAL
+  Formatter: HIGH
+  Signs: HIGHEST
+Locale: en
+Log_Lag_Over_Milis: 100
+Me:
+  Aliases:
+  - me
+  - shout
+  - status
+  Bungee: {}
+  Enabled:
+    Enabled: true
+Motd:
+  Command_Aliases:
+  - welcome
+  Delay_Ticks: 20
+  Enabled:
+    Enabled: true
+  Message:
+  - '&r'
+  - '&f    Welcome,&#02DBDD {player_name}&f to &#02DBDD&lServer Network&f.'
+  - '&f        Currently playing with&#02DBDD {bungee_total} &fplayers.'
+  - '&r'
+  - '&#02DBDD                  Further Information'
+  - '[JSON] [{"text":"&r            "},{"text":"&fForum","clickEvent":{"action":"open_url","value":"https://www.server.com/"},"hoverEvent":{"action":"show_text","value":{"text":"&b&lForum\n&b
+    ➠ &fᴡᴡᴡ.sᴇʀᴠᴇʀ.ᴄᴏᴍ"}}},{"text":"&7 ▪ "},{"text":"&fStore","clickEvent":{"action":"open_url","value":"https://store.server.com/"},"hoverEvent":{"action":"show_text","value":{"text":"&b&lStore\n&b
+    ➠ &fsᴛᴏʀᴇ.sᴇʀᴠᴇʀ.ᴄᴏᴍ"}}},{"text":"&7 ▪ "},{"text":"&fVote","clickEvent":{"action":"open_url","value":"https://vote.server.com/"},"hoverEvent":{"action":"show_text","value":{"text":"&b&lVote\n&b
+    ➠ &fᴠᴏᴛᴇ.sᴇʀᴠᴇʀ.ᴄᴏᴍ"}}},{"text":"&7 ▪ "},{"text":"&fDiscord","clickEvent":{"action":"open_url","value":"https://discord.server.com/"},"hoverEvent":{"action":"show_text","value":{"text":"&b&lDiscord\n&b
+    ➠ &fᴅɪsᴄᴏʀᴅ.sᴇʀᴠᴇʀ.ᴄᴏᴍ"}}}]'
+  - '&r'
+  Message_First_Time: []
+  Message_Newcomer: []
+  Sound: ENTITY_PLAYER_LEVELUP, 1F, 0.1F
+Mute:
+  Apply_Limits_For_Essentials_Mute: {}
+  Broadcast: {}
+  Disabled_Commands:
+  - /me
+  - /tell
+  - /msg
+  - /r
+  - /w
+  Prevent:
+    Placing_Signs: {}
+    Writing_Books: {}
+  Silence:
+    Death_Messages: {}
+    Join_Messages: {}
+    Quit_Messages: {}
+MySQL:
+  Connection:
+    Connector_Advanced: jdbc:mysql://{host}:{port}/{database}?autoReconnect=true&useSSL=false
+    Database: minecraft
+    Host: localhost
+    Password: ''
+    Port: '3306'
+    Table_Prefix: ChatControl_
+    User: ''
+  Enabled:
+    Enabled: false
+Newcomer:
+  Restrict_Chat:
+    Enabled:
+      Enabled: false
+    Whitelist: []
+  Restrict_Commands:
+    Blacklist: {}
+    Enabled:
+      Enabled: true
+    Whitelist:
+    - /login
+    - /l
+    - /register
+    - /reg
+  Restrict_Seeing_Chat:
+    Enabled:
+      Enabled: false
+  Threshold: 0 minutes
+  Warn_Points_Multiplier: 1.0
+  Worlds:
+  - '*'
+Notify_Promotions: {}
+Notify_Updates: {}
+Packets:
+  Enabled:
+    Enabled: false
+  Replace_Unicode_In_Books: {}
+  Tab_Complete:
+    Enabled:
+      Enabled: false
+    Hide_Vanished_Players:
+      Enabled:
+        Enabled: true
+      Maximum_Length: 20
+    Only_In_Commands: {}
+    Require_Arguments: 1
+    Require_Length: -1
+Points:
+  Enabled:
+    Enabled: false
+  Reset_Task:
+    Remove:
+      global: 5
+      spam: 1
+    Repeat_Every_Seconds: 20
+  Smart_Warnings: {}
+  Warn_Sets:
+    fastmessages:
+      '10':
+      - warn &cSlow down chat, otherwise you will be banned.
+      '14':
+      - kick {player} &cSlow down chat (last warning)
+      '6':
+      - warn &cPlease slow down chat messages.
+    global:
+      '15':
+      - warn &c**** &lHey &c{player} **** &7-> &cThis is your &6final &cwarning!
+      '30':
+      - kick {player} &cKicked for breaking the rules
+      '5':
+      - warn &7Please obey the &2rules &7otherwise you will be &4punished&7.
+    spam:
+      '10':
+      - warn &cPlease do not spam, otherwise you will be banned.
+      '12':
+      - kick {player} &cSpamming the chat (last warning)
+      '6':
+      - warn &cPlease do not act like spammer.
+    swear:
+      '4':
+      - warn &cYou have received first warning for swearing.
+      '6':
+      - warn &cPlease do not swear, otherwise an action will be taken!
+      '8':
+      - kick {player} &cInappropriate language (last warning)
+Prefix: ''
+Private_Messages:
+  Aliases:
+    Reply:
+    - reply
+    - r
+    Tell:
+    - tell
+    - msg
+    - whisper
+    - w
+    TogglePM:
+    - togglepm
+    - ignorepm
+    - msgtoggle
+    - togglemsg
+    - pmtoggle
+  Auto_Start:
+    Enabled:
+      Enabled: true
+    End: exit
+    Prefix: '@'
+    Start_For_Empty_Tell_Command: {}
+  Bungee: {}
+  Deny_Message_Self: {}
+  Enabled:
+    Enabled: true
+  Format_Receiver: Private_Message_Receiver
+  Format_Sender: Private_Message_Sender
+  Register_Reply_To_Receiver: {}
+  Register_Reply_To_Self: {}
+  Reply_Change_Timeout: 3 seconds
+  Toast:
+    Enabled:
+      Enabled: false
+    Format: '&3✎ &f{sender} sent you a message.'
+Regex_Case_Insensitive: {}
+Regex_Strip_Colors: {}
+Regex_Timeout_Milis: 100
+Rules:
+  Anvil:
+    Check: {}
+    Replace: {}
+  Books:
+    Check: {}
+    Replace: {}
+  Bungee: {}
+  Chat: {}
+  Chat_Ignorer:
+    Enabled:
+      Enabled: false
+    Sets:
+      swear:
+        Ignored_By_Default: {}
+  Commands: {}
+  Packets: {}
+  Signs:
+    Block: {}
+    Check: {}
+    Drop: {}
+  Verbose: {}
+Serialization: ''
+Server_Name: Survival
+Silent_Startup: {}
+Sound_Notify:
+  Color: '&a'
+  Cooldown: 10 seconds
+  Enabled:
+    Enabled: false
+  Enabled_In_Commands:
+  - /msg
+  - /tell
+  - /t
+  - /w
+  - /r
+  Require_Afk: {}
+  Require_Prefix: '@'
+  Sound: ENTITY_CHICKEN_EGG, 1F, 1.5F
+  Use_Sender_Group_Color: {}
+Spy:
+  Books: {}
+  Bungee: {}
+  Channel_Prefix: ''
+  Command_Aliases:
+  - spy
+  - socialspy
+  Command_List:
+  - /tell
+  - /msg
+  - /t
+  - /whisper
+  - /r
+  - /reply
+  Command_List_Works_Like_Blacklist: {}
+  Enabled:
+    Enabled: true
+  Format: '[JSON] [{"text":"§4Spy §8§l›§c {player} §7issued: §c{message}","hoverEvent":{"action":"show_text","value":{"text":"§4
+    › §lCOMMAND SPY§r\n\n§cTime: §f{timestamp}\n§cPlayer: §f{player}\n\n§4Entered
+    Command\n§4 ➠ §f{message}"}}}]'
+  Format_PM: '&8[&5spy&8] &7[{player}] -> [{receiver}]: &7{message}'
+  Format_Sign: '&8SPY: &7 [{location}] {player} placed a sign: [&8{text}&7]'
+  Format_TownyChat: '&8[&5spy&8] &7[{townychat_channel}] &7{player}: &7{message}'
+  Log_McMMO: {}
+  McMMO: {}
+  Signs: {}
+Toggle_Broadcast:
+  Aliases:
+  - togglebroadcast
+  - togglebc
+  - toggletm
+  Enabled:
+    Enabled: false
+Translate_Diacritical_Marks: {}
+Version: 24
+Writer:
+  Commands:
+  - /me
+  - /msg
+  - /m
+  - /tell
+  - /t
+  - /reply
+  - /r
+  - /mail
+  Enabled:
+    Enabled: true
+  Ignore_Players:
+  - ignoredAdmin
